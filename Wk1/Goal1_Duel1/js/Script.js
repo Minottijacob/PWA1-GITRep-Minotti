@@ -51,7 +51,7 @@ alert ("Derp");
           var results = winnerCheck();
           console.log(results);
           
-          
+          // Looking for winner and breaking program
           if (results === "No Winner"){
               round++;
               alert(playerOne+":"+playerOneHealth+" *ROUND "+round+" OVER*"+playerTwo+":"+playerTwoHealth);
