@@ -24,7 +24,7 @@ alert ("Derp");
    var playerTwoHealth = 100;
    
    //Rounds
-   var round = 1;
+   var round = 0;
    
    function fight(){
        console.log("In the Fight Function.");
@@ -48,22 +48,41 @@ alert ("Derp");
            
            console.log(playerOne+":"+playerOneHealth+" *START* "+playerTwo+":"+playerTwoHealth);
            
-           winnerCheck();
+          var results = winnerCheck();
+          console.log(results);
+          
+          
+          if (results === "No Winner"){
+              round++;
+              alert(playerOne+":"+playerOneHealth+" *ROUND "+round+" OVER*"+playerTwo+":"+playerTwoHealth);
+          }else{
+              alert(results);
+              break;
+          }
            
        };
    };
    
    function winnerCheck(){
-       var results = "No Winner.";
+       console.log("In Winner check function");
+       var result = "No Winner";
        if (playerOneHealth<1 && playerTwoHealth<1) {
-           
+           result = "You Both Die.";
+       }else if(playerOneHealth<1){
+       result =playerTwo+ " Wins!";
+    
        }
-   };
+     else if(playerTwoHealth<1){
+       result =playerOne+ " Wins!"; }
+   
+   return result;
+       };
+  
 
     /* Starting Program Here */
 fight();
     
-}
+    }
 
 
 )();
