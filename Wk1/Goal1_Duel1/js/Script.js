@@ -33,19 +33,31 @@ alert ("Derp");
        
        for (var i=0; i < 10; i++){
            
+           // Damage Generating
            var minDamageOne = playerOneDamage * .5;
            var minDamageTwo = playerTwoDamage * .5;
            var f1 = Math.floor(Math.random()*(playerOneDamage-minDamageOne)+minDamageOne);
            var f2 = Math.floor(Math.random()*(playerTwoDamage-minDamageTwo)+minDamageTwo);
            
-           console.log(f1);
-           console.log(f2);
+           //console.log(f1);
+           //console.log(f2);
+           
+           //Dealing Damaging
+           playerOneHealth-=f1;
+           playerTwoHealth-=f2;
+           
+           console.log(playerOne+":"+playerOneHealth+" *START* "+playerTwo+":"+playerTwoHealth);
+           
+           winnerCheck();
            
        };
    };
    
    function winnerCheck(){
-       
+       var results = "No Winner.";
+       if (playerOneHealth<1 && playerTwoHealth<1) {
+           
+       }
    };
 
     /* Starting Program Here */
