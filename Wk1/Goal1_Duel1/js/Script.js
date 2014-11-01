@@ -16,18 +16,32 @@ alert ("Derp");
    var playerTwo = prompt("Player Two please type in your name.");
    
    //player damage
-   var PlayerOneDamage = 20;
-   var PlayerTwoDamage = 20;
+   var playerOneDamage = 20;
+   var playerTwoDamage = 20;
    
    //player health
-   var PlayerOneHealth = 100;
-   var PlayerTwoHealth = 100;
+   var playerOneHealth = 100;
+   var playerTwoHealth = 100;
    
    //Rounds
    var round = 1;
    
    function fight(){
        console.log("In the Fight Function.");
+       
+       alert(playerOne+":"+playerOneHealth+" *START* "+playerTwo+":"+playerTwoHealth);
+       
+       for (var i=0; i < 10; i++){
+           
+           var minDamageOne = playerOneDamage * .5;
+           var minDamageTwo = playerTwoDamage * .5;
+           var f1 = Math.floor(Math.random()*(playerOneDamage-minDamageOne)+minDamageOne);
+           var f2 = Math.floor(Math.random()*(playerTwoDamage-minDamageTwo)+minDamageTwo);
+           
+           console.log(f1);
+           console.log(f2);
+           
+       };
    };
    
    function winnerCheck(){
