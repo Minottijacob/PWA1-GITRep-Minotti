@@ -2,6 +2,7 @@
  * November 2nd, 2014
  * Debug v1
 */
+
 // Create privatized scope using a self-executing function
 (function(){
 	
@@ -12,34 +13,39 @@
 	;
 	
 	// Validates search query
-	var validqte == function(query){
+	var validqte = function(query){
 		
 		// Trim whitespace from start and end of search query
+                //line 20 needs to be a conditional
 		while(query.charAt(0) = " "){
 			query = query.substring(1, query.length);
 		};
 		while(query.charAt(query.length-1) === ""){
 			query = query.substring(0, query.length-1);
-		;
+                }
 		
 		// Check search length, must have 3 characters
                 // Syntax Error on line 28 (Missing " )
 		if(query.length < 3){
-			alert("Your search query is too small, try again.);
+			alert("Your search query is too small, try again.");
 			
 			// (DO NOT FIX THE LINE DIRECTLY BELOW)
 			searchInput.focus();
 			return;
 		};
 		
-		search(query);
+	//minsing brackets, semicolons
+            search(query);
 	};
 	
 	// Finds search matches
 	var search = function(query)
 		
 		// split the user's search query string into an array
-		var queryArray = query.join(" ");
+                /* I'm not quite sure what's going on here. It says it expected an operand but I don't see where
+		an operand could possibly go in that statement.
+     */
+                var queryArray = query.join(" ");
 		
 		// array to store matched results from database.js
 		var results = [];
@@ -121,5 +127,5 @@
         // THE LINE DIRECTLY BELOW IS CORRECT
 		return false;
 	;
-
+//Again probably some missing brackets or semicolons amongst this mess.
 })();
