@@ -17,8 +17,8 @@
         //added extra = to the var (SyntaxError)
 	var validqte = function(query){
 		
-		// Trim whitespace from start and end of search query
-		while(query.charAt(0) = " "){
+		// Trim whitespace from start and end of search query. Line 21 made into an '===' Syntax error
+		while(query.charAt(0) === " "){
 			query = query.substring(1, query.length);
 		};
 		while(query.charAt(query.length-1) === ""){
@@ -38,11 +38,11 @@
 	};
 	
 	// Finds search matches
-	var search = function(query)
+	var search = function(query){
 		
-		// split the user's search query string into an array
+		// split the user's search query string into an array. I believe the Syntax Error was because of a missing bracket on line 41.
 		var queryArray = query.join(" ");
-		
+
 		// array to store matched results from database.js
 		var results = [];
 
