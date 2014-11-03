@@ -1,9 +1,7 @@
 /* Jacob R. Minotti
- * Nov 2nd, 2014
- * ANALYZE Buggy Search v1 */
-
-
-
+ * November 2nd, 2014
+ * Debug v1
+*/
 // Create privatized scope using a self-executing function
 (function(){
 	
@@ -14,20 +12,20 @@
 	;
 	
 	// Validates search query
-        //added extra = to the var (SyntaxError)
-	var validqte = function(query){
+	var validqte == function(query){
 		
-		// Trim whitespace from start and end of search query. Line 21 made into an '===' Syntax error
-		while(query.charAt(0) === " "){
+		// Trim whitespace from start and end of search query
+		while(query.charAt(0) = " "){
 			query = query.substring(1, query.length);
 		};
 		while(query.charAt(query.length-1) === ""){
 			query = query.substring(0, query.length-1);
 		;
 		
-		// Check search length, must have 3 characters. On line 30 missing a "  (syntax error 2)
+		// Check search length, must have 3 characters
+                // Syntax Error on line 28 (Missing " )
 		if(query.length < 3){
-			alert("Your search query is too small, try again.");
+			alert("Your search query is too small, try again.);
 			
 			// (DO NOT FIX THE LINE DIRECTLY BELOW)
 			searchInput.focus();
@@ -38,11 +36,11 @@
 	};
 	
 	// Finds search matches
-	var search = function(query){
+	var search = function(query)
 		
-		// split the user's search query string into an array. I believe the Syntax Error was because of a missing bracket on line 41.
+		// split the user's search query string into an array
 		var queryArray = query.join(" ");
-
+		
 		// array to store matched results from database.js
 		var results = [];
 
