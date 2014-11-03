@@ -11,7 +11,7 @@
 		searchInput = document.forms[0].search,
 		currentSearch = ''
 	;
-	
+	//validate is spelled incorrectly
 	// Validates search query
 	var validqte = function(query){
 		
@@ -34,7 +34,7 @@
 			return;
 		};
 		
-	//minsing brackets, semicolons
+	//missing brackets, semicolons
             search(query);
 	};
 	
@@ -57,7 +57,7 @@
 			// save a lowercase variable of the video title
 			var dbTitleEnd = db[i].indexOf('|');
 			var dbitem = db[i].tolowercase().substring(0, dbTitleEnd);
-			
+			//improper camel casing on line 64 and 59
 			// loop through the user's search query words
 			// save a lowercase variable of the search keyword
 			for(var ii=0, jj=queryArray.length; ii<jj; ii++){
@@ -73,7 +73,7 @@
 		;
 		
 		results.sort();
-		
+		//line 78 should be a conditional (===) instead of a statement (=)
 		// Check that matches were found, and run output functions
 		if(results.length = 0){
 			noMatch();
@@ -116,7 +116,7 @@
 		};
 		resultsDIV.innerHTML = html; //THIS LINE IS CORRECT.
 	};
-	
+	//improper spelling of vaildate on line 124
 	// The onsubmit event will be reviewed in upcoming Course Material.
 	// THE LINE DIRECTLY BELOW IS CORRECT
 	document.forms[0].onsubmit = function(){
