@@ -17,7 +17,7 @@
 		
 		// Trim whitespace from start and end of search query
                 //line 20 needs to be a conditional
-		while(query.charAt(0) = " "){
+		while(query.charAt(0) == " "){
 			query = query.substring(1, query.length);
 		};
 		while(query.charAt(query.length-1) === ""){
@@ -39,11 +39,12 @@
 	};
 	
 	// Finds search matches
-	var search = function(query)
+	var search = function(query){
 		
 		// split the user's search query string into an array
                 /* I'm not quite sure what's going on here. It says it expected an operand but I don't see where
 		an operand could possibly go in that statement.
+                The issue was above this line of code. Added a { bracket for the function
      */
                 var queryArray = query.join(" ");
 		
