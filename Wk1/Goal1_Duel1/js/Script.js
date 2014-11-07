@@ -23,8 +23,8 @@ alert ("Derp");
    //var playerTwoDamage = 20;
    
    //player's max health at start of the game
-   //var playerOneHealth = 100;
-   // playerTwoHealth = 100;
+   var = playerOneHealth = 100;
+    var = playerTwoHealth = 100;
    
    //Rounds
    var round = 0;
@@ -39,15 +39,15 @@ alert ("Derp");
            // Computer generates a number inbetween the minimum and maximum damage a player can take for each player
            var minDamageOne = player1[1] * .5;
            var minDamageTwo = player2[2] * .5;
-           var f1 = Math.floor(Math.random()*(player1[1]-minDamageOne)+minDamageOne);
-           var f2 = Math.floor(Math.random()*(player2[1]-minDamageTwo)+minDamageTwo);
+           var f1 = Math.floor(Math.random()*(playerOneHealth-minDamageOne)+minDamageOne);
+           var f2 = Math.floor(Math.random()*(playerTwoHealth-minDamageTwo)+minDamageTwo);
            
            //console.log(f1);
            //console.log(f2);
            
            //Players get dealt damage based off of the numbers that the computer has generated for them.
-           playerOneHealth-=f1;
-           playerTwoHealth-=f2;
+         -=f1;
+           -=f2;
            
            console.log(player1[0]+":"+player1[2]+" *START* "+player2[0]+":"+player2[2]);
            
