@@ -5,24 +5,24 @@
 
 // Create privatized scope using a self-executing function
 (function(){
-
+console.log ("Derp");
 	// Variable initialization (DO NOT FIX ANY OF THE BELOW VAR's)
 	var resultsDIV = document.getElementById("results"),
 		searchInput = document.forms[0].search,
 		currentSearch = ''
 		;
-	//validate is spelled incorrectly
+	//validate is spelled incorrectly (Fixed)
 	// Validates search query
-	var validqte = function(query){
-
+	var validate = function(query){
+console.log ("We're in the Validation Function");
 		// Trim whitespace from start and end of search query
 		//line 20 needs to be a conditional
-		while(query.charAt(0) = " "){
+		while(query.charAt(0) === " "){
 			query = query.substring(1, query.length);
-		};
+		}
 		while(query.charAt(query.length-1) === ""){
 			query = query.substring(0, query.length-1);
-		};
+		}
 
 		// Check search length, must have 3 characters
 		// Syntax Error on line 28 (Missing " )
@@ -32,7 +32,7 @@
 			// (DO NOT FIX THE LINE DIRECTLY BELOW)
 			searchInput.focus();
 			return;
-		}; //added }
+		} //added }
 
 		//missing brackets, semicolons
 		search(query);
@@ -69,10 +69,9 @@
 			if (compare !== -1) {
 				results.push(db[i]);
 			}
-			;
-		}
-		; //added }
-	}; //added }
+
+		} //added }
+	} //added }
 
 			results.sort();
 			//line 78 should be a conditional (===) instead of a statement (=)
@@ -81,7 +80,7 @@
 				noMatch();
 			}else{
 				showMatches(results);
-			};
+			}
 		};
 
 		// Put "No Results" message into page (DO NOT FIX THE HTML VAR NOR THE innerHTML)
@@ -119,11 +118,12 @@
 			resultsDIV.innerHTML = html; //THIS LINE IS CORRECT.
 		};
 		//improper spelling of vaildate on line 124
+	//Fixed Spelling on Validate
 		// The onsubmit event will be reviewed in upcoming Course Material.
 		// THE LINE DIRECTLY BELOW IS CORRECT
 		document.forms[0].onsubmit = function() {
 			var query = searchInput.value;
-			validqte(query);
+			validate(query);
 
 
 			// return false is needed for most events - this will be reviewed in upcoming course material
