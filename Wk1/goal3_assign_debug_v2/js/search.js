@@ -1,6 +1,6 @@
 /* Jacob R. Minotti
- * November 2nd, 2014
- * Debug v1
+ * November 7th, 2014
+ * Debug v2
 */
 
 // Create privatized scope using a self-executing function
