@@ -14,7 +14,10 @@ alert ("Derp");
     //Players are prompted for a username of their choice.
    var playerOne = prompt("Player One please type in your username.");
    var playerTwo = prompt("Player Two please type in your username.");
-   
+
+    // Arrays
+    var player1 = [playerOne, 20, 100];
+    var player2 = [playerTwo, 20 100];
    //player damage
    var playerOneDamage = 20;
    var playerTwoDamage = 20;
@@ -34,10 +37,10 @@ alert ("Derp");
        for (var i=0; i < 10; i++){
            
            // Computer generates a number inbetween the minimum and maximum damage a player can take for each player
-           var minDamageOne = playerOneDamage * .5;
-           var minDamageTwo = playerTwoDamage * .5;
-           var f1 = Math.floor(Math.random()*(playerOneDamage-minDamageOne)+minDamageOne);
-           var f2 = Math.floor(Math.random()*(playerTwoDamage-minDamageTwo)+minDamageTwo);
+           var minDamageOne = player1[1] * .5;
+           var minDamageTwo = player2[2] * .5;
+           var f1 = Math.floor(Math.random()*(player1[1]-minDamageOne)+minDamageOne);
+           var f2 = Math.floor(Math.random()*(player2[2]-minDamageTwo)+minDamageTwo);
            
            //console.log(f1);
            //console.log(f2);
