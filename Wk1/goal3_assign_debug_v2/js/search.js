@@ -22,7 +22,7 @@
 		};
 		while(query.charAt(query.length-1) === ""){
 			query = query.substring(0, query.length-1);
-		}
+		};
 
 		// Check search length, must have 3 characters
 		// Syntax Error on line 28 (Missing " )
@@ -32,7 +32,7 @@
 			// (DO NOT FIX THE LINE DIRECTLY BELOW)
 			searchInput.focus();
 			return;
-		};
+		}; //added }
 
 		//missing brackets, semicolons
 		search(query);
@@ -51,7 +51,7 @@
 	var results = [];
 
 	// loop through each index of db array
-	for(var i=0, j=db.length; i<j; i++){
+	for(var i=0, j=db.length; i<j; i++) {
 
 		// each db[i] is a single video item, each title ends with a pipe "|"
 		// save a lowercase variable of the video title
@@ -60,17 +60,19 @@
 		//improper camel casing on line 64 and 59
 		// loop through the user's search query words
 		// save a lowercase variable of the search keyword
-		for(var ii=0, jj=queryArray.length; ii<jj; ii++){
+		for (var ii = 0, jj = queryArray.length; ii < jj; ii++) {
 			var qitem = queryArray[ii].tolowercase();
 
 			// is the keyword anywhere in the video title?
 			// If a match is found, push full db[i] into results array
 			var compare = dbitem.indexOf(qitem);
-			if(compare !== -1){
+			if (compare !== -1) {
 				results.push(db[i]);
-			};
+			}
 			;
-			;
+		}
+		; //added }
+	}; //added }
 
 			results.sort();
 			//line 78 should be a conditional (===) instead of a statement (=)
