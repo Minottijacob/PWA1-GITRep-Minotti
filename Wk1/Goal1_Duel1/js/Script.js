@@ -40,7 +40,7 @@ alert ("Derp");
            var minDamageOne = player1[1] * .5;
            var minDamageTwo = player2[2] * .5;
            var f1 = Math.floor(Math.random()*(player1[1]-minDamageOne)+minDamageOne);
-           var f2 = Math.floor(Math.random()*(player2[2]-minDamageTwo)+minDamageTwo);
+           var f2 = Math.floor(Math.random()*(player2[1]-minDamageTwo)+minDamageTwo);
            
            //console.log(f1);
            //console.log(f2);
@@ -57,7 +57,7 @@ alert ("Derp");
           // Looking for winner and stop the program when a winner can be found or if there is no winner after the end of the ten rounds. 
           if (results === "No Winner"){
               round++;
-              alert(player1[0]+":"+playerOneHealth+" *ROUND "+round+" OVER*"+player2[0]+":"+playerTwoHealth);
+              alert(playerOne+":"+playerOneHealth+" *ROUND "+round+" OVER*"+playerTwo+":"+playerTwoHealth);
           }else{
               alert(results);
               break;
