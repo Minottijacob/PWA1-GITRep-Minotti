@@ -27,8 +27,8 @@
       <file leaf-file-name="Script.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/js/Script.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.6847826" vertical-offset="126" max-vertical-offset="1515">
-              <caret line="42" column="72" selection-start-line="42" selection-start-column="72" selection-end-line="42" selection-end-column="72" />
+            <state vertical-scroll-proportion="0.46875" vertical-offset="240" max-vertical-offset="1515">
+              <caret line="39" column="25" selection-start-line="39" selection-start-column="25" selection-end-line="39" selection-end-column="25" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
               </folding>
@@ -182,7 +182,15 @@
     </option>
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager />
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/js/Script.js</url>
+          <line>47</line>
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="1" />
+    </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
@@ -196,8 +204,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/js/Script.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6847826" vertical-offset="126" max-vertical-offset="1515">
-          <caret line="42" column="72" selection-start-line="42" selection-start-column="72" selection-end-line="42" selection-end-column="72" />
+        <state vertical-scroll-proportion="0.46875" vertical-offset="240" max-vertical-offset="1515">
+          <caret line="39" column="25" selection-start-line="39" selection-start-column="25" selection-end-line="39" selection-end-column="25" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
           </folding>
