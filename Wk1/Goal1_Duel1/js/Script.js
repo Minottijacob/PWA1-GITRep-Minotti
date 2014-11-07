@@ -16,8 +16,8 @@ alert ("Derp");
    var playerTwo = prompt("Player Two please type in your username.");
 
     // Arrays
-    var player1 = [playerOne, 20, 100];
-    var player2 = [playerTwo, 20 100];
+    var player1 = [20, 100];
+    var player2 = [20, 100];
    //player damage
    //var playerOneDamage = 20;
    //var playerTwoDamage = 20;
@@ -32,7 +32,7 @@ alert ("Derp");
    function fight(){
        console.log("In the Fight Function.");
        //tells the player information about each other and what round the game is on.
-       alert(playerOne+":"+playerOneHealth+" *START* "+playerTwo+":"+playerTwoHealth);
+       alert(playerOne+":"+player1[1]+" *START* "+playerTwo+":"+player2[1]);
        
        for (var i=0; i < 10; i++){
            
