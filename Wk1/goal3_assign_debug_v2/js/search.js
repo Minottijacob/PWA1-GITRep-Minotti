@@ -5,7 +5,7 @@
 
 // Create privatized scope using a self-executing function
 (function(){
-	
+	console.log ("Starting Application");
 	// Variable initialization (DO NOT FIX ANY OF THE BELOW VAR's)
 	var resultsDIV = document.getElementById("results"),
 		searchInput = document.forms[0].search,
@@ -41,7 +41,7 @@
 	
 	// Finds search matches
 	var search = function(query){
-		
+		console.log("In the Anon Search Function");
 		// split the user's search query string into an array
                 /* I'm not quite sure what's going on here. It says it expected an operand but I don't see where
 		an operand could possibly go in that statement.
@@ -86,6 +86,7 @@
 	
 	// Put "No Results" message into page (DO NOT FIX THE HTML VAR NOR THE innerHTML)
 	var noMatch = function(){
+            console.log("In the noMatch Anon Function");
 		var html = ''+
 			'<p>No Results found.</p>'+
 			'<p style="font-size:10px;">Try searching for "JavaScript".  Just an idea.</p>'
@@ -95,6 +96,7 @@
 	
 	// Put matches into page as paragraphs with anchors
 	var showMatches = function(results){
+            console.log("In the showMatches Anon Function");
 		
 		// THE NEXT 4 LINES ARE CORRECT.
 		var html = '<p>Results</p>', 
@@ -104,6 +106,7 @@
 		
 		// loop through all the results search() function
 		for(var i=0, j=results.length; i<j; i++){
+                    console.log("In the for loop for search results");
 		
 			// title of video ends with pipe
 			// pull the title's string using index numbers
