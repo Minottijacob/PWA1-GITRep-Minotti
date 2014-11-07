@@ -19,12 +19,12 @@ alert ("Derp");
     var player1 = [playerOne, 20, 100];
     var player2 = [playerTwo, 20 100];
    //player damage
-   var playerOneDamage = 20;
-   var playerTwoDamage = 20;
+   //var playerOneDamage = 20;
+   //var playerTwoDamage = 20;
    
    //player's max health at start of the game
-   var playerOneHealth = 100;
-   var playerTwoHealth = 100;
+   //var playerOneHealth = 100;
+   // playerTwoHealth = 100;
    
    //Rounds
    var round = 0;
@@ -49,7 +49,7 @@ alert ("Derp");
            playerOneHealth-=f1;
            playerTwoHealth-=f2;
            
-           console.log(playerOne+":"+playerOneHealth+" *START* "+playerTwo+":"+playerTwoHealth);
+           console.log(player1[0]+":"+player1[2]+" *START* "+player2[0]+":"+player2[2]);
            
           var results = winnerCheck();
           console.log(results);
@@ -57,7 +57,7 @@ alert ("Derp");
           // Looking for winner and stop the program when a winner can be found or if there is no winner after the end of the ten rounds. 
           if (results === "No Winner"){
               round++;
-              alert(playerOne+":"+playerOneHealth+" *ROUND "+round+" OVER*"+playerTwo+":"+playerTwoHealth);
+              alert(player1[0]+":"+playerOneHealth+" *ROUND "+round+" OVER*"+player2[0]+":"+playerTwoHealth);
           }else{
               alert(results);
               break;
@@ -75,11 +75,11 @@ alert ("Derp");
        if (playerOneHealth<1 && playerTwoHealth<1) {
            result = "You Both Die.";
        }else if(playerOneHealth<1){
-       result =playerTwo+ " Wins!";
+       result =player2[0]+ " Wins!";
     
        }
      else if(playerTwoHealth<1){
-       result =playerOne+ " Wins!"; }
+       result =player1[0]+ " Wins!"; }
    
    return result;
        };
