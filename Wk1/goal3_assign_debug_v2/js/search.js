@@ -16,8 +16,9 @@
 	var validqte = function(query){
 		
 		// Trim whitespace from start and end of search query
-                //line 20 needs to be a conditional
-		while(query.charAt(0) == " "){
+                //line 21 needs to be a conditional
+                //Made it a '===' instead of a '=='
+		while(query.charAt(0) === " "){
 			query = query.substring(1, query.length);
 		};
 		while(query.charAt(query.length-1) === ""){
@@ -76,7 +77,7 @@
 		results.sort();
 		//line 78 should be a conditional (===) instead of a statement (=)
 		// Check that matches were found, and run output functions
-		if(results.length = 0){
+		if(results.length === 0){
 			noMatch();
 		}else{
 			showMatches(results);
@@ -129,6 +130,7 @@
 		return false;
 	;
 //Again probably some missing brackets or semicolons amongst this mess.
+//Completely redid that monstrosity that was a "Closure."
         };
-        }
-        );
+    }
+);
