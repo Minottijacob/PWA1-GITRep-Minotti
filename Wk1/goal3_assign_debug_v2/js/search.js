@@ -70,8 +70,8 @@
 				if(compare !== -1){
 					results.push(db[i]);
 				};
-			;
-		;
+                        };
+                };
 		
 		results.sort();
 		//line 78 should be a conditional (===) instead of a statement (=)
@@ -129,4 +129,6 @@
 		return false;
 	;
 //Again probably some missing brackets or semicolons amongst this mess.
-})();
+        };
+        }
+        );
