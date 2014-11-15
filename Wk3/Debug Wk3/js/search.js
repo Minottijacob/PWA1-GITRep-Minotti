@@ -28,7 +28,7 @@ console.log ("We're in the Validation Function");
 		// Syntax Error on line 28 (Missing " )
 		if(query.length < 3){
 			alert("Your search query is too small, try again.");
-console.log ("In the Too Small Conditional");
+
 			// (DO NOT FIX THE LINE DIRECTLY BELOW)
 			searchInput.focus();
 			return;
@@ -40,24 +40,24 @@ console.log ("In the Too Small Conditional");
 
 	// Finds search matches
 	var search = function(query){
-console.log ("Search Matches");
+
 	// split the user's search query string into an array
 	/* I'm not quite sure what's going on here. It says it expected an operand but I don't see where
 	 an operand could possibly go in that statement.
 	 */
-
-		var queryArray = String.split(" ");
+	var queryArray = String.split(" ");
 
 	// array to store matched results from database.js
 	var results = [];
-console.log("Array to store matches");
+
 	// loop through each index of db array
 	for(var i=0, j=db.length; i<j; i++) {
-console.log("Loop through");
+
 		// each db[i] is a single video item, each title ends with a pipe "|"
 		// save a lowercase variable of the video title
 		var dbTitleEnd = db[i].indexOf('|');
-		var dbitem = db[i].tolowercase().substring(0, dbTitleEnd);
+		//fixed camelcasing on the line below
+		var dbitem = db[i].toLowerCase().substring(0, dbTitleEnd);
 		//improper camel casing on line 64 and 59
 		// loop through the user's search query words
 		// save a lowercase variable of the search keyword
@@ -66,7 +66,6 @@ console.log("Loop through");
 
 			// is the keyword anywhere in the video title?
 			// If a match is found, push full db[i] into results array
-			console.log("Match is found");
 			var compare = dbitem.indexOf(qitem);
 			if (compare !== -1) {
 				results.push(db[i]);
@@ -78,8 +77,7 @@ console.log("Loop through");
 			results.sort();
 			//line 78 should be a conditional (===) instead of a statement (=)
 			// Check that matches were found, and run output functions
-			console.log("matches were found run output");
-		if(results.length = 0){
+			if(results.length = 0){
 				noMatch();
 			}else{
 				showMatches(results);
@@ -106,7 +104,7 @@ console.log("Loop through");
 
 			// loop through all the results search() function
 			for(var i=0, j=results.length; i<j; i++){
-console.log("loop through all results");
+
 				// title of video ends with pipe
 				// pull the title's string using index numbers
 				titleEnd = results[i].indexOf('|');
