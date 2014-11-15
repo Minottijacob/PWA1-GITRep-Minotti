@@ -1,5 +1,5 @@
 /* Jacob R. Minotti
- * November 2nd, 2014
+ * November 14th, 2014
  * Debug v1
  */
 
@@ -60,9 +60,10 @@ console.log ("We're in the Validation Function");
 		var dbitem = db[i].toLowerCase().substring(0, dbTitleEnd);
 		//improper camel casing on line 64 and 59
 		// loop through the user's search query words
-		// save a lowercase variable of the search keyword
+		// save a lowercase variable of the search keyword another Fixed
+		console.log ("I'm Looping@");
 		for (var ii = 0, jj = queryArray.length; ii < jj; ii++) {
-			var qitem = queryArray[ii].tolowercase();
+			var qitem = queryArray[ii].toLowerCase();
 
 			// is the keyword anywhere in the video title?
 			// If a match is found, push full db[i] into results array
@@ -77,6 +78,7 @@ console.log ("We're in the Validation Function");
 			results.sort();
 			//line 78 should be a conditional (===) instead of a statement (=)
 			// Check that matches were found, and run output functions
+		console.log("Loop2");
 			if(results.length = 0){
 				noMatch();
 			}else{
@@ -103,13 +105,14 @@ console.log ("We're in the Validation Function");
 				;
 
 			// loop through all the results search() function
+			console.log("Loop3");
 			for(var i=0, j=results.length; i<j; i++){
 
 				// title of video ends with pipe
 				// pull the title's string using index numbers
 				titleEnd = results[i].indexOf('|');
 				title = results[i].subString(0, titleEnd);
-
+console.log("Loop4");
 				// pull the video url after the title
 				url = results[i].substring(results[i].indexOf('|')+1, results[i].length);
 
@@ -125,7 +128,7 @@ console.log ("We're in the Validation Function");
 		document.forms[0].onsubmit = function() {
 			var query = searchInput.value;
 			validate(query);
-
+console.log("validateee");
 
 			// return false is needed for most events - this will be reviewed in upcoming course material
 			// THE LINE DIRECTLY BELOW IS CORRECT
